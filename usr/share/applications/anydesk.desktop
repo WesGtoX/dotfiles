@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=AnyDesk
+GenericName=AnyDesk
+X-GNOME-FullName=AnyDesk
+Exec=anydesk %u
+Icon=anydesk
+Terminal=false
+TryExec=anydesk
+Categories=Network;GTK;
+MimeType=x-scheme-handler/anydesk;

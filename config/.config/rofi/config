@@ -1,0 +1,29 @@
+# script to run Rofi
+# rofi.theme: .config/rofi/rofi.rasi
+# rofi.theme: .config/rofi/themes/gruvbox-common.rasi
+# rofi.theme: .config/rofi/themes/Pop-Dark.rasi
+
+rofi.color-enabled: true
+rofi.color-window: #00030F, #00030F, #00030F
+rofi.color-normal: #00030F, #d8dee8, #00030F, #00030F, #870000
+rofi.color-active: #00030F, #b48ead, #00030F, #00030F, #93e5cc
+rofi.color-urgent: #00030F, #ebcb8b, #00030F, #00030F, #ebcb8b
+
+
+
+
+# color: #780000;
+# color: #870000;
+# color: #000000;
+# color: #3c3c3c;
+# color: #c2c2c2;
+
+# colors: #161616,#111111,#870000,#FFFFFF,#3f3f3f,#FFFFFF,#ff0000,#E50000
+# color: #161616;
+# color: #111111;
+# color: #870000;
+# color: #FFFFFF;
+# color: #3f3f3f;
+# color: #FFFFFF;
+# color: #ff0000;
+# color: #E50000;
