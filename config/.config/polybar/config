@@ -19,8 +19,8 @@
 ;       COLORS       ;
 ;:::::::::::::::::::::
 [colors]
-bar = #00030F
-# bar = #0000000
+# bar = #00030F
+bar = #0000000
 icon = #ffffff
 battery = #00ffb52a
 
