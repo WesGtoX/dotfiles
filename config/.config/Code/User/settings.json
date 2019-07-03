@@ -3,7 +3,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "editor.tabSize": 4,
-    // "editor.fontFamily": "DejaVu Sans Mono, Fira Code",
+    "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, FontAwesome, \"Font Awesome 5 Brands\"",
     "workbench.iconTheme": "material-icon-theme",
     // "explorer.confirmDragAndDrop": false,
     "liveServer.settings.donotShowInfoMsg": true,
