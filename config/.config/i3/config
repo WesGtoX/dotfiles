@@ -119,7 +119,7 @@ assign [class="(Firefox|Google-chrome)"] $ws2
 assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|NetBeans IDE 8.2)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
-assign [class="(Anki)"] $ws6
+assign [class="(Anki|VirtualBox Manager)"] $ws6
 assign [class="(deepin-movie|zoom)"] $ws7
 assign [class="(Hubstaff)"] $ws8
 assign [class="(Anydesk)"] $ws9
@@ -128,6 +128,16 @@ assign [class="(feh)"] $ws10
 for_window [class=feh|Anki|Lxappearance|Anydesk|zoom|Pavucontrol|Nm-connection-editor|Hubstaff] floating enable, move position center
 for_window [class=Firefox|feh|Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|Thunar|Anydesk] focus
 
+workspace $ws1 output eDP1;
+workspace $ws2 output eDP1;
+workspace $ws3 output HDMI1;
+workspace $ws4 output eDP1;
+workspace $ws5 output eDP1;
+workspace $ws6 output eDP1;
+workspace $ws7 output eDP1;
+workspace $ws8 output eDP1;
+workspace $ws9 output eDP1;
+workspace $ws10 output eDP1;
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -297,9 +307,16 @@ exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minim
 exec --no-startup-id compton --respect-prop-shadow -b
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
+exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1
 
 
 # personal
 bindsym $mod+Shift+h exec $HOME/.config/Hubstaff/HubstaffClient.bin.x86_64 floating enable
+
+# take a screenshot of a screen region and copy it to a clipboard
+bindsym --release Ctrl+Print exec $HOME/.config/scripts/screenshots.sh -s /home/wesley/Images/Screenshots/
+
+# take a screenshot of a whole window and copy it to a clipboard
+bindsym --release Print exec $HOME/.config/scripts/screenshots.sh $HOME/Images/Screenshots/
 
 bindsym $mod+u exec .config/scripts/restart_dunst.sh

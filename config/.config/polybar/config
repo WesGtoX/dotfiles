@@ -33,6 +33,8 @@ lin = #c4c4c4
 ;      BAR TOP       ;
 ;:::::::::::::::::::::
 [bar/top]
+monitor = eDP1
+
 width = 100%
 height = 22
 fixed-center = true
@@ -86,6 +88,8 @@ margin = 0
 ;     BAR BOTTOM     ;
 ;:::::::::::::::::::::
 [bar/bottom]
+monitor = eDP1
+
 width = 100%
 height = 22
 fixed-center = true
@@ -196,7 +200,7 @@ ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
-ws-icon-6 = 7;
+ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
