@@ -82,7 +82,7 @@ set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6:"
+set $ws6 "6:"
 set $ws7 "7:"
 set $ws8 "8:"
 set $ws9 "9:"
@@ -119,7 +119,7 @@ assign [class="(Firefox|Google-chrome)"] $ws2
 assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|NetBeans IDE 8.2)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
-assign [class="(Anki|VirtualBox Manager)"] $ws6
+assign [class="(Anki|VirtualBox Manager|Wine|DBeaver|Mysql-workbench-bin)"] $ws6
 assign [class="(deepin-movie|zoom)"] $ws7
 assign [class="(Hubstaff)"] $ws8
 assign [class="(Anydesk)"] $ws9
@@ -128,16 +128,16 @@ assign [class="(feh)"] $ws10
 for_window [class=feh|Anki|Lxappearance|Anydesk|zoom|Pavucontrol|Nm-connection-editor|Hubstaff] floating enable, move position center
 for_window [class=Firefox|feh|Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|Thunar|Anydesk] focus
 
-workspace $ws1 output eDP1;
-workspace $ws2 output eDP1;
-workspace $ws3 output HDMI1;
-workspace $ws4 output eDP1;
-workspace $ws5 output eDP1;
-workspace $ws6 output eDP1;
-workspace $ws7 output eDP1;
-workspace $ws8 output eDP1;
-workspace $ws9 output eDP1;
-workspace $ws10 output eDP1;
+# workspace $ws1 output eDP1
+# workspace $ws2 output eDP1
+# workspace $ws3 output HDMI1
+# workspace $ws4 output eDP1
+# workspace $ws5 output eDP1
+# workspace $ws6 output eDP1
+# workspace $ws7 output eDP1
+# workspace $ws8 output eDP1
+# workspace $ws9 output eDP1
+# workspace $ws10 output eDP1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -299,6 +299,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # desktop lock
 # set image lock "betterlockscreen -u $HOME/Images/Wallpapers/example.jpg"
 bindsym $mod+l exec betterlockscreen -l blur -t "Wesley Mendes"
+exec --no-startup-id betterlockscreen --off 5 -l blur -t "Wesley Mendes"
 
 # inicialize
 exec_always --no-startup-id $HOME/.config/scripts/polybar.sh

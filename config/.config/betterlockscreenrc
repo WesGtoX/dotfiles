@@ -13,3 +13,6 @@ verifcolor=ffffffff
 timecolor=ffffffff
 datecolor=ffffffff
 loginbox=00000066
+font="sans-serif"
+locktext='Wesley Mendes'
+lock_timeout=5
