@@ -115,7 +115,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # force window to open on certain workspaces
 # run xprop to get windows class
 # assign [class="(Termite)"] $ws1
-assign [class="(Firefox|Google-chrome)"] $ws2
+assign [class="(firefox|Google-chrome)"] $ws2
 assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|NetBeans IDE 8.2)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5

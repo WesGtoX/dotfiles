@@ -13,3 +13,5 @@ parse_git_branch() {
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\[\033[36m\]$(parse_git_branch)\[\033[00m\]$ '
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
