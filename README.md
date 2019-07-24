@@ -26,13 +26,17 @@ My personal dotfiles from my notebook.
 
 - [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 
+- [Ranger](https://github.com/ranger/ranger)
+
 - [Feh](https://github.com/derf/feh)
 
 ## Preview
 
-![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.png)
+- **Termite, Zsh, Ranger**  
+![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.png)  
 
-![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.png)
+- **Rofi**  
+![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.png)  
 
 
 ## License
