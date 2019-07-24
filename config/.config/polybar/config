@@ -25,7 +25,7 @@ icon = #ffffff
 battery = #00ffb52a
 
 focus = #339AF0
-urgent = #00FA9A
+urgent = #00e5ff
 warn = #ff1000
 
 lin = #c4c4c4
