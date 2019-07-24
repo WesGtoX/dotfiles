@@ -30,9 +30,9 @@ My personal dotfiles from my notebook.
 
 ## Preview
 
-![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.jpg)
+![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.png)
 
-![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.jpg)
+![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.png)
 
 
 ## License
