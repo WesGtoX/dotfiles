@@ -18,6 +18,8 @@ My personal dotfiles from my notebook.
 
 - [Temite](https://github.com/thestinger/termite)
 
+- [LightDM](https://github.com/CanonicalLtd/lightdm)
+
 - [Dunst](https://github.com/dunst-project/dunst)
 
 - [Compton](https://github.com/chjj/compton)
