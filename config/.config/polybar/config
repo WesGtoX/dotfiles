@@ -66,7 +66,7 @@ font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=10;0;0"
 font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
 font-7 = "Nerd Font Mono:pixelsize=10;0;0"
 
-# modules-left = menu
+modules-left = info-trash isrunning-bluetooth updates-arch-combined
 modules-center = i3
 modules-right = temperature battery user system
 
@@ -124,7 +124,7 @@ font-7 = "Nerd Font Mono:pixelsize=10;0;0"
 modules-left = backlight volume 
 # prev play-stop next musica
 modules-center = window
-modules-right = cpu ram files wired wireless date hour
+modules-right = cpu ram files wired wireless popup-calendar hour
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -185,6 +185,40 @@ cursor-scroll = ns-resize
 # # content-padding = 2
 # # content-background = ${colors.screenshot}
 # # click-left = $HOME/.config/scripts/screenshot.sh &
+
+;:::::::::::::::::::::
+;       TRASH        ;
+;:::::::::::::::::::::
+[module/info-trash]
+type = custom/script
+interval = 60
+label =  %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/info-trash.sh
+click-left = $HOME/.config/scripts/info-trash.sh --clean
+
+;:::::::::::::::::::::
+;     BLUETOOTH      ;
+;:::::::::::::::::::::
+[module/isrunning-bluetooth]
+type = custom/script
+label =  %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/isrunning-bluetooth.sh
+interval = 10
+
+;:::::::::::::::::::::
+;    ARCH UPDATES    ;
+;:::::::::::::::::::::
+[module/updates-arch-combined]
+type = custom/script
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/updates-arch-combined.sh
+interval = 600
 
 ;:::::::::::::::::::::
 ;         i3         ;
@@ -291,9 +325,9 @@ ramp-capacity-3 = "%{F#98de00}%{F-}"
 ramp-capacity-4 = "%{F#98de00}%{F-}"
 ramp-capacity-foreground = ${colors.icon}
 
-animation-charging-0 = "%{F#98de00}%{F-}"
-animation-charging-1 = "%{F#98de00}%{F-}"
-animation-charging-2 = "%{F#98de00}%{F-}"
+animation-charging-0 = "%{F#FF0000}%{F-}"
+animation-charging-1 = "%{F#FF0000}%{F-}"
+animation-charging-2 = "%{F#e4b226}%{F-}"
 animation-charging-3 = "%{F#98de00}%{F-}"
 animation-charging-4 = "%{F#98de00}%{F-}"
 animation-charging-foreground = ${colors.icon}
@@ -535,14 +569,26 @@ label = %time%
 ;:::::::::::::::::::::
 ;        DATE        ;
 ;:::::::::::::::::::::
-[module/date]
-type = internal/date
-interval = 1
-date = %d/%m/%Y
-format =  <label>
-format-padding = 2
-format-background = ${colors.bar}
-label = %date%
+[module/popup-calendar]
+type = custom/script
+interval = 5
+label =  %output%
+label-padding = 2
+exec = $HOME/.config/scripts/popup-calendar.sh
+click-left = $HOME/.config/scripts/popup-calendar.sh --popup
+
+# ;:::::::::::::::::::::
+# ;        DATE        ;
+# ;:::::::::::::::::::::
+# [module/date]
+# type = internal/date
+# interval = 1
+# date = %a, %d %B %Y
+# format = <label>
+# format-padding = 1
+# format-background = ${colors.bar}
+# label = %date%
+# date-alt = %Y-%m-%d
 
 ;:::::::::::::::::::::
 ;     DEFINITIONS    ;
