@@ -301,6 +301,7 @@ tail = true
 label = %output%
 label-padding = 2
 label-background = ${colors.bar}
+exec-if = nvidia-smi
 exec = $HOME/.config/scripts/polybar/system-nvidia-smi.sh
 
 ;:::::::::::::::::::::
