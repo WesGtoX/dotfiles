@@ -3,7 +3,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "editor.tabSize": 4,
-    "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, Hack Nerd Font, \"Font Awesome 5 Brands\", \"Font Awesome 5 Free Solid\"",
+    "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, Hack Nerd Font, Weather Icons, \"Font Awesome 5 Brands\", \"Font Awesome 5 Free Solid\"",
     "workbench.iconTheme": "material-icon-theme",
     // "explorer.confirmDragAndDrop": false,
     "liveServer.settings.donotShowInfoMsg": true,
