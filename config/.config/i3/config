@@ -303,7 +303,7 @@ bindsym $mod+l exec betterlockscreen -l blur -t "Wesley Mendes"
 exec --no-startup-id betterlockscreen --off 5 -l blur -t "Wesley Mendes"
 
 # inicialize
-exec_always --no-startup-id $HOME/.config/scripts/polybar.sh
+exec_always --no-startup-id $HOME/.config/scripts/polybar/polybar.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minimalist2.jpg
 # exec_always --no-startup-id feh --bg-fill --randomize $HOME/Images/Wallpapers/*
 exec --no-startup-id compton --respect-prop-shadow -b
