@@ -185,6 +185,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.config/zsh/exports
 
 # User configuration
 

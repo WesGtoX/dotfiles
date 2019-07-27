@@ -1,0 +1,2 @@
+# Environment variables
+export PATH=$PATH:/home/wesley/.pipes
