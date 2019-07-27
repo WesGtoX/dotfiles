@@ -64,11 +64,12 @@ font-3 = "FontAwesome:style=Regular:pixelsize=10;0;0"
 font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=10;0;0"
 font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=10;0;0"
 font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
-font-7 = "Nerd Font Mono:pixelsize=10;0;0"
+font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
+font-8 = Weather Icons:size=10;0
 
-modules-left = info-trash isrunning-bluetooth updates-arch-combined
+modules-left = info-trash bluetooth updates-arch
 modules-center = i3
-modules-right = temperature battery user system
+modules-right = temperature cpu ram nvidia-info battery user system
 
 tray-position = right
 tray-padding = 2
@@ -119,12 +120,13 @@ font-3 = "FontAwesome:style=Regular:pixelsize=10;0;0"
 font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=10;0;0"
 font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=10;0;0"
 font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
-font-7 = "Nerd Font Mono:pixelsize=10;0;0"
+font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
+font-8 = Weather Icons:size=10;0
 
-modules-left = backlight volume 
+modules-left = backlight volume pulseaudio-input openweathermap
 # prev play-stop next musica
 modules-center = window
-modules-right = cpu ram files wired wireless popup-calendar hour
+modules-right = files wired wireless popup-calendar hour
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -144,26 +146,6 @@ cursor-scroll = ns-resize
 # click-left = exec .config/rofi/rofi-app
 
 ;:::::::::::::::::::::
-;     i3 VINTAGE     ;
-;:::::::::::::::::::::
-# # [module/i3vintage]
-# # type = custom/text
-# # content = 
-# # content-padding = 2
-# # content-background = ${colors.i3vintage}
-# # click-left = termite -e $HOME/.config/instalar.sh &
-
-;:::::::::::::::::::::
-;       GITHUB       ;
-;:::::::::::::::::::::
-# # [module/github]
-# # type = custom/text
-# # content = 
-# # content-padding = 2
-# # content-background = ${colors.github}
-# # click-left = termite -e $HOME/.config/desenvolvedor/github.sh &
-
-;:::::::::::::::::::::
 ;     SCREENCAST     ;
 ;:::::::::::::::::::::
 # # [module/screencast]
@@ -172,19 +154,9 @@ cursor-scroll = ns-resize
 # # label = %output%
 # # label-padding = 2
 # # label-background = ${colors.screencast}
-# # click-left = termite -e $HOME/.config/scripts/screencast.sh &
-# # #exec = $HOME/.config/scripts/screencast.sh status
+# # click-left = termite -e $HOME/.config/scripts/polybar/screencast.sh &
+# # #exec = $HOME/.config/scripts/polybar/screencast.sh status
 # # tail = true
-
-;:::::::::::::::::::::
-;     SCREENSHOT     ;
-;:::::::::::::::::::::
-# # [module/screenshot]
-# # type = custom/text
-# # content = 
-# # content-padding = 2
-# # content-background = ${colors.screenshot}
-# # click-left = $HOME/.config/scripts/screenshot.sh &
 
 ;:::::::::::::::::::::
 ;       TRASH        ;
@@ -195,29 +167,29 @@ interval = 60
 label =  %output%
 label-padding = 2
 label-background = ${colors.bar}
-exec = $HOME/.config/scripts/info-trash.sh
-click-left = $HOME/.config/scripts/info-trash.sh --clean
+exec = $HOME/.config/scripts/polybar/info-trash.sh
+click-left = $HOME/.config/scripts/polybar/info-trash.sh --clean
 
 ;:::::::::::::::::::::
 ;     BLUETOOTH      ;
 ;:::::::::::::::::::::
-[module/isrunning-bluetooth]
+[module/bluetooth]
 type = custom/script
 label =  %output%
 label-padding = 2
 label-background = ${colors.bar}
-exec = $HOME/.config/scripts/isrunning-bluetooth.sh
+exec = $HOME/.config/scripts/polybar/isrunning-bluetooth.sh
 interval = 10
 
 ;:::::::::::::::::::::
 ;    ARCH UPDATES    ;
 ;:::::::::::::::::::::
-[module/updates-arch-combined]
+[module/updates-arch]
 type = custom/script
 label = %output%
 label-padding = 2
 label-background = ${colors.bar}
-exec = $HOME/.config/scripts/updates-arch-combined.sh
+exec = $HOME/.config/scripts/polybar/updates-arch-combined.sh
 interval = 600
 
 ;:::::::::::::::::::::
@@ -234,7 +206,7 @@ ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
@@ -296,6 +268,40 @@ ramp-4 = "%{F#FF0000}%{F-}"
 # ramp-2 = ""
 # ramp-3 = ""
 # ramp-4 = ""
+
+;:::::::::::::::::::::
+;         CPU        ;
+;:::::::::::::::::::::
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+label =  %percentage%%
+label-padding = 2
+label-background = ${colors.bar}
+
+;:::::::::::::::::::::
+;       MEMORY       ;
+;:::::::::::::::::::::
+[module/ram]
+type = internal/memory
+interval = 0.2
+format = <label>
+# label =  %gb_used%/%gb_free%
+label =  %percentage_used%%
+label-padding = 2
+label-background = ${colors.bar}
+
+;:::::::::::::::::::::
+;         GPU        ;
+;:::::::::::::::::::::
+[module/nvidia-info]
+type = custom/script
+tail = true
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/polybar/system-nvidia-smi.sh
 
 ;:::::::::::::::::::::
 ;       BATTERY      ;
@@ -389,8 +395,7 @@ menu-4-0-exec = systemctl poweroff
 type = internal/xbacklight
 enable-scroll = false
 
-# format =  <label>
-format = <ramp> <label>
+format = <ramp><label>
 format-padding = 2
 label = %percentage%%
 
@@ -399,34 +404,64 @@ ramp-1 = 🌔
 ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
-ramp-padding = 2
+ramp-padding = 1
 
 ;:::::::::::::::::::::
 ;       VOLUME       ;
 ;:::::::::::::::::::::
 [module/volume]
 type = internal/alsa
-format-volume = <label-volume>
-format-volume-prefix = "  "
+format-volume = <ramp-volume> <label-volume>
+# format-volume-prefix = "  "
 format-volume-padding = 2
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+ramp-volume-7 = 
+ramp-volume-8 = 
+ramp-volume-9 = 
+ramp-padding = 1
 
 label-volume = %percentage%%
 label-volume-background = ${colors.bar}
 
-label-muted = "  "
+label-muted = 
+# label-muted = "  "
 format-volume-muted = <label-muted>
 format-muted-padding = 2
 format-muted-background = ${colors.bar}
 
-# ramp-volume-0 = 
-# ramp-volume-1 = 
-# ramp-volume-2 = 
+;:::::::::::::::::::::
+;  PULSEAUDIO INPUT  ;
+;:::::::::::::::::::::
+[module/pulseaudio-input]
+type = custom/script
+tail = true
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --input_volume_listener
+click-right = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --input
+click-left = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --mute_source
+scroll-up =  $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --volume_source_up
+scroll-down = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --volume_source_down
 
-# label-muted = 🔇 muted
-
-# ramp-volume-0 = 🔈
-# ramp-volume-1 = 🔉
-# ramp-volume-2 = 🔊
+;:::::::::::::::::::::
+;   OPENWEATHERMAP   ;
+;:::::::::::::::::::::
+[module/openweathermap]
+type = custom/script
+interval = 600
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/polybar/openweathermap-fullfeatured.sh
+label-font = 9
 
 ;:::::::::::::::::::::
 ;    PREV CONTROL    ;
@@ -466,7 +501,7 @@ format-muted-background = ${colors.bar}
 # label-padding = 2
 # label-background = ${colors.musica}
 # label-maxlen = 50
-# exec = $HOME/.config/scripts/musica.sh
+# exec = $HOME/.config/scripts/polybar/musica.sh
 
 ;:::::::::::::::::::::
 ;       WINDOW       ;
@@ -481,35 +516,14 @@ label-maxlen = 50
 label-empty = Arch Linux
 
 ;:::::::::::::::::::::
-;         CPU        ;
-;:::::::::::::::::::::
-[module/cpu]
-type = internal/cpu
-interval = 0.5
-format = <label>
-label =  %percentage%%
-label-padding = 2
-label-background = ${colors.bar}
-
-;:::::::::::::::::::::
-;       MEMORY       ;
-;:::::::::::::::::::::
-[module/ram]
-type = internal/memory
-interval = 0.2
-format = <label>
-# label =  %gb_used%/%gb_free%
-label =  %percentage_used%%
-label-padding = 2
-label-background = ${colors.bar}
-
-;:::::::::::::::::::::
 ;        FILES       ;
 ;:::::::::::::::::::::
 [module/files]
 type = internal/fs
-interval = 25
+interval = 10
+spacing = 1
 mount-0 = /
+mount-1 = /home
 
 label-mounted =  %mountpoint%: %percentage_used%%
 label-mounted-padding = 2
@@ -528,7 +542,7 @@ format-connected = <label-connected>
 format-connected-padding = 2
 format-connected-background = ${colors.bar}
 label-connected =   %downspeed%      %upspeed%
-format-disconnected = <label-disconnected>
+# format-disconnected = <label-disconnected>
 # label-disconnected = " Disconnected"
 
 ; All labels support the following tokens:
@@ -574,8 +588,8 @@ type = custom/script
 interval = 5
 label =  %output%
 label-padding = 2
-exec = $HOME/.config/scripts/popup-calendar.sh
-click-left = $HOME/.config/scripts/popup-calendar.sh --popup
+exec = $HOME/.config/scripts/polybar/popup-calendar.sh
+click-left = $HOME/.config/scripts/polybar/popup-calendar.sh --popup
 
 # ;:::::::::::::::::::::
 # ;        DATE        ;
