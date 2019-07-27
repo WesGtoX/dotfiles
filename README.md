@@ -34,12 +34,15 @@ My personal dotfiles from my notebook.
 
 ## Preview
 
-- **Termite, Zsh, Ranger**  
-![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.png)  
+- **i3-gaps**  
+![screenshot01](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot01.png)
+![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.png)
+
+- **Termite, Zsh, Ranger, Dunst**  
+![screenshot03](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot03.png)
 
 - **Rofi**  
-![screenshot02](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot02.png)  
-
+![screenshot04](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot04.png)
 
 ## License
 
