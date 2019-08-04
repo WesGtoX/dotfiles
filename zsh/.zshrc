@@ -185,7 +185,10 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.config/zsh/exports
+
+if [ $UID -ne 0 ]; then
+    source $HOME/.config/zsh/exports
+fi
 
 # User configuration
 
