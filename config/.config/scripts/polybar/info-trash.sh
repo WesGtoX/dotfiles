@@ -7,6 +7,7 @@ case "$1" in
         mkdir ~/.local/share/Trash/files
         mkdir ~/.local/share/Trash/info
         notify-send -a "Trash" "Empty Trash..." --urgency low -i $ICON_PATH
+        mpv $HOME/.config/sounds/trash-empty.oga &
         ;;
     *)
         # find ~/.local/share/Trash/files/ -maxdepth 1 | wc -l

@@ -48,3 +48,4 @@ file_path=${base_folder}screenshot_$( date '+%Y-%m-%d_%H-%M-%S' ).png
 import ${params} ${file_path}
 xclip -selection clipboard -target image/png -i < ${file_path}
 notify-send -a "Print Screen" "Screenshot taken..." --urgency low -i $ICON_PATH
+mpv $HOME/.config/sounds/camera-shutter.oga &

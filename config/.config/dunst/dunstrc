@@ -159,7 +159,7 @@
     max_icon_size = 64
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
+    icon_path = /usr/share/icons/Arc/panel/:/usr/share/icons/Arc/devices/
 
     ### History ###
 
@@ -278,6 +278,10 @@
 # to "".
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
+
+[play_sound]
+    summary = "*"
+    script = $HOME/.config/scripts/dunst/alert.sh
 
 #[espeak]
 #    summary = "*"
