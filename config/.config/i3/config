@@ -303,19 +303,25 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # desktop lock
+bindsym $mod+l exec dm-tool switch-to-greeter
+
+# set light-locker
+# light-locker will lock after 5 seconds screensaver
+exec --no-startup-id light-locker --lock-after-screensaver=5 &
+
 # set image lock "betterlockscreen -u $HOME/Images/Wallpapers/example.jpg"
-bindsym $mod+l exec betterlockscreen -l blur -t "Wesley Mendes"
-exec --no-startup-id betterlockscreen --off 5 -l blur -t "Wesley Mendes"
+# bindsym $mod+l exec betterlockscreen -l blur -t "Wesley Mendes"
+# exec --no-startup-id betterlockscreen --off 5 -l blur -t "Wesley Mendes"
 
 # inicialize
 exec_always --no-startup-id $HOME/.config/scripts/polybar/polybar.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minimalist2.jpg
 # exec_always --no-startup-id feh --bg-fill --randomize $HOME/Images/Wallpapers/*
 exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
-exec --no-startup-id compton --respect-prop-shadow -b
-exec --no-startup-id dunst
-exec --no-startup-id nm-applet
-exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1
+exec --no-startup-id compton --respect-prop-shadow -b &
+exec --no-startup-id dunst &
+exec --no-startup-id nm-applet &
+exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
 
 
 # personal
