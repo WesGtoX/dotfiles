@@ -19,6 +19,7 @@ My personal dotfiles from my notebook.
 - [Temite](https://github.com/thestinger/termite)
 
 - [LightDM](https://github.com/CanonicalLtd/lightdm)
+    - Theme and lock: [Litarvan's LightDM WebKit2 Theme](https://github.com/WesGtoX/lightdm-webkit-theme-litarvan)
 
 - [Dunst](https://github.com/dunst-project/dunst)
 
@@ -26,11 +27,12 @@ My personal dotfiles from my notebook.
 
 - [Rofi](https://github.com/davatorium/rofi)
 
-- [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
-
 - [Ranger](https://github.com/ranger/ranger)
 
 - [Feh](https://github.com/derf/feh)
+
+- [~~Betterlockscreen~~](https://github.com/pavanjadhaw/betterlockscreen) *(Replace by Litarvan's LightDM)*
+
 
 ## Preview
 
@@ -43,6 +45,7 @@ My personal dotfiles from my notebook.
 
 - **Rofi**  
 ![screenshot04](https://raw.githubusercontent.com/WesGtoX/dotfiles/master/screenshot/screenshot04.png)
+
 
 ## License
 
