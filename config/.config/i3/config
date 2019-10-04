@@ -116,7 +116,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # run xprop to get windows class
 # assign [class="(Termite)"] $ws1
 assign [class="(firefox|Google-chrome)"] $ws2
-assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java-lang-Thread|NetBeans IDE 8.2)"] $ws3
+assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java-lang-Thread|jetbrains-studio|NetBeans IDE 8.2)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
 assign [class="(Anki|VirtualBox Manager|Wine|DBeaver|Mysql-workbench-bin)"] $ws6

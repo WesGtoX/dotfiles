@@ -17,6 +17,7 @@
     "liveServer.settings.donotShowInfoMsg": true,
     // "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.CustomBrowser": "google-chrome-stable",
+    "terminal.integrated.cursorStyle": "line",
 
     //TERMINAL CONFIGURATIONS
     // "terminal.integrated.cursorStyle": "line",
