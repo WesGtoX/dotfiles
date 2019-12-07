@@ -84,7 +84,7 @@ set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
 set $ws7 "7:"
-set $ws8 "8:"
+set $ws8 "8:"
 set $ws9 "9:"
 set $ws10 "10:"
 
@@ -116,17 +116,24 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # run xprop to get windows class
 # assign [class="(Termite)"] $ws1
 assign [class="(firefox|Google-chrome)"] $ws2
-assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java-lang-Thread|jetbrains-studio|NetBeans IDE 8.2)"] $ws3
+assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java-lang-Thread|jetbrains-studio|NetBeans IDE 8.2|Genymotion Player)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
-assign [class="(Anki|VirtualBox Manager|Wine|DBeaver|Mysql-workbench-bin|RedisDesktopManager)"] $ws6
+assign [class="(Anki|Wine|DBeaver|Mysql-workbench-bin|Insomnia|RedisDesktopManager)"] $ws6
 assign [class="(deepin-movie|zoom)"] $ws7
-assign [class="(Hubstaff)"] $ws8
+assign [class="(VirtualBox Manager|Genymotion|Hubstaff)"] $ws8
 assign [class="(Anydesk)"] $ws9
-assign [class="(feh|Wpspdf|Gimp-2.10)"] $ws10
+assign [class="(Wpspdf|Gimp-2.10)"] $ws10
+
 # for_window [class="Termite"] floating enable, resize set 900 450, move position center
-for_window [class=feh|Anki|Lxappearance|Anydesk|zoom|Pavucontrol|Nm-connection-editor|java-lang-Thread|Putty|Hubstaff] floating enable, move position center
-for_window [class=Firefox|feh|Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|Thunar|Anydesk|Wpspdfq|Gimp-2.10] focus
+
+for_window [class=Anki|Anydesk|feh|Hubstaff|java-lang-Thread|feh] floating enable, move position center
+for_window [class=Lxappearance|Nm-connection-editor|Pavucontrol|Putty|zoom] floating enable, move position center
+
+for_window [class=Anydesk|Code|feh|Firefox|Genymotion] focus
+for_window [class=Gimp-2.10|jetbrains-clion|jetbrains-idea|jetbrains-pycharm] focus
+for_window [class=Subl3|Thunar|VirtualBox-Manager|Wpspdfq] focus
+
 for_window [class="Yad" title="yad-calendar"] floating enable
 
 # workspace $ws1 output eDP1
@@ -308,7 +315,7 @@ bindsym $mod+l exec dm-tool switch-to-greeter
 
 # set light-locker
 # light-locker will lock after 5 seconds screensaver
-exec --no-startup-id light-locker --lock-after-screensaver=5 &
+# exec --no-startup-id light-locker --lock-after-screensaver=5 &
 
 # set image lock "betterlockscreen -u $HOME/Images/Wallpapers/example.jpg"
 # bindsym $mod+l exec betterlockscreen -l blur -t "Wesley Mendes"
@@ -326,7 +333,7 @@ exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
 
 
 # personal
-bindsym $mod+Shift+h exec $HOME/.config/Hubstaff/HubstaffClient.bin.x86_64 floating enable
+# bindsym $mod+Shift+h exec $HOME/.config/Hubstaff/HubstaffClient.bin.x86_64 floating enable
 
 # take a screenshot of a screen region and copy it to a clipboard
 bindsym --release Ctrl+Print exec $HOME/.config/scripts/screenshots.sh -s /home/wesley/Images/Screenshots/
