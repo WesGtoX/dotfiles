@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 #
 ###############################################################################
-# Title:       screenshots
-# Description: Make screenshots of different stuff
-# Usage:       Add to PATH and bind to a shortcut in the WM
-# Version:     0.0.1
+# Title:        screenshots
+# Description:  Make screenshots of different stuff
+# Usage:        Add to PATH and bind to a shortcut in the WM
+# Dependencies: xclip imagemagick dunst mpv
+# Version:      0.0.1
 ###############################################################################
 
 
