@@ -67,7 +67,7 @@ font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
 font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
 font-8 = Weather Icons:size=10;0
 
-modules-left = info-trash bluetooth updates-arch
+modules-left = info-trash bluetooth updates-arch prev play-stop next
 modules-center = i3
 modules-right = temperature cpu ram nvidia-info battery user system
 
@@ -124,7 +124,7 @@ font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
 font-8 = Weather Icons:size=10;0
 
 modules-left = backlight volume pulseaudio-input openweathermap
-# prev play-stop next musica
+# musica
 modules-center = window
 modules-right = files wired wireless popup-calendar hour
 
@@ -467,31 +467,31 @@ label-font = 9
 ;:::::::::::::::::::::
 ;    PREV CONTROL    ;
 ;:::::::::::::::::::::
-# [module/prev]
-# type = custom/text
-# content = 
-# content-padding = 2
-# content-background = ${colors.prev}
-# click-left = playerctl previous
+[module/prev]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl previous
 
 ;:::::::::::::::::::::
 ;    PLAY / PAUSE    ;
 ;:::::::::::::::::::::
-# [module/play-stop]
-# type = custom/text
-# content = 
-# content-background = ${colors.play-stop}
-# click-left = playerctl play-pause
+[module/play-stop]
+type = custom/text
+content = 
+content-background = ${colors.bar}
+click-left = playerctl play-pause
 
 ;:::::::::::::::::::::
 ;    NEXT CONTROL    ;
 ;:::::::::::::::::::::
-# [module/next]
-# type = custom/text
-# content = 
-# content-padding = 2
-# content-background = ${colors.next}
-# click-left = playerctl next
+[module/next]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl next
 
 ;:::::::::::::::::::::
 ;        MUSIC       ;
