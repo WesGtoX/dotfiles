@@ -120,7 +120,7 @@ assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
 assign [class="(Anki|Wine|DBeaver|Mysql-workbench-bin|Insomnia|RedisDesktopManager)"] $ws6
-assign [class="(deepin-movie|Spotify|zoom)"] $ws7
+assign [class="(deepin-movie|zoom)"] $ws7
 assign [class="(VirtualBox Manager|Genymotion|Hubstaff)"] $ws8
 assign [class="(Anydesk)"] $ws9
 assign [class="(Wpspdf|Gimp-2.10)"] $ws10
@@ -133,6 +133,8 @@ for_window [class=Lxappearance|Nm-connection-editor|Pavucontrol|Putty|zoom] floa
 for_window [class=Anydesk|Code|feh|Firefox|Genymotion] focus
 for_window [class=Gimp-2.10|jetbrains-clion|jetbrains-idea|jetbrains-pycharm] focus
 for_window [class=Subl3|Thunar|VirtualBox-Manager|Wpspdfq] focus
+
+for_window [class="Spotify"] move to workspace $ws7
 
 for_window [class="Yad" title="yad-calendar"] floating enable
 

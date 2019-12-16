@@ -29,6 +29,9 @@ urgent = #00e5ff
 warn = #ff1000
 
 lin = #c4c4c4
+
+spotify = #1db954
+
 ;:::::::::::::::::::::
 ;      BAR TOP       ;
 ;:::::::::::::::::::::
@@ -67,7 +70,7 @@ font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
 font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
 font-8 = Weather Icons:size=10;0
 
-modules-left = info-trash bluetooth updates-arch prev play-stop next
+modules-left = info-trash bluetooth updates-arch spotify prev play-stop next
 modules-center = i3
 modules-right = temperature cpu ram nvidia-info battery user system
 
@@ -191,6 +194,57 @@ label-padding = 2
 label-background = ${colors.bar}
 exec = $HOME/.config/scripts/polybar/updates-arch-combined.sh
 interval = 600
+
+;:::::::::::::::::::::
+;       SPOTIFY      ;
+;:::::::::::::::::::::
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "    "
+format = <label>
+exec = python $HOME/.config/scripts/polybar/spotify_status.py -f '{artist} - {song}'
+format-underline = ${colors.spotify}
+
+;:::::::::::::::::::::
+;    PREV CONTROL    ;
+;:::::::::::::::::::::
+[module/prev]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl previous
+
+;:::::::::::::::::::::
+;    PLAY / PAUSE    ;
+;:::::::::::::::::::::
+[module/play-stop]
+type = custom/text
+content = 
+content-background = ${colors.bar}
+click-left = playerctl play-pause
+
+;:::::::::::::::::::::
+;    NEXT CONTROL    ;
+;:::::::::::::::::::::
+[module/next]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl next
+
+;:::::::::::::::::::::
+;        MUSIC       ;
+;:::::::::::::::::::::
+# [module/musica]
+# type = custom/script
+# label = %output%
+# label-padding = 2
+# label-background = ${colors.musica}
+# label-maxlen = 50
+# exec = $HOME/.config/scripts/polybar/musica.sh
 
 ;:::::::::::::::::::::
 ;         i3         ;
@@ -463,46 +517,6 @@ label-padding = 2
 label-background = ${colors.bar}
 exec = $HOME/.config/scripts/polybar/openweathermap-fullfeatured.sh
 label-font = 9
-
-;:::::::::::::::::::::
-;    PREV CONTROL    ;
-;:::::::::::::::::::::
-[module/prev]
-type = custom/text
-content = 
-content-padding = 2
-content-background = ${colors.bar}
-click-left = playerctl previous
-
-;:::::::::::::::::::::
-;    PLAY / PAUSE    ;
-;:::::::::::::::::::::
-[module/play-stop]
-type = custom/text
-content = 
-content-background = ${colors.bar}
-click-left = playerctl play-pause
-
-;:::::::::::::::::::::
-;    NEXT CONTROL    ;
-;:::::::::::::::::::::
-[module/next]
-type = custom/text
-content = 
-content-padding = 2
-content-background = ${colors.bar}
-click-left = playerctl next
-
-;:::::::::::::::::::::
-;        MUSIC       ;
-;:::::::::::::::::::::
-# [module/musica]
-# type = custom/script
-# label = %output%
-# label-padding = 2
-# label-background = ${colors.musica}
-# label-maxlen = 50
-# exec = $HOME/.config/scripts/polybar/musica.sh
 
 ;:::::::::::::::::::::
 ;       WINDOW       ;
