@@ -326,6 +326,7 @@ bindsym $mod+l exec dm-tool switch-to-greeter
 # inicialize
 exec_always --no-startup-id $HOME/.config/scripts/polybar/polybar.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minimalist2.jpg
+exec --no-startup-id discord
 # exec_always --no-startup-id feh --bg-fill --randomize $HOME/Images/Wallpapers/*
 exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
 exec --no-startup-id compton --respect-prop-shadow -b &

@@ -363,7 +363,7 @@ exec = $HOME/.config/scripts/polybar/system-nvidia-smi.sh
 ;:::::::::::::::::::::
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 full-at = 98
 
@@ -552,7 +552,7 @@ label-unmounted-background = ${colors.bar}
 ;:::::::::::::::::::::
 [module/wired]
 type = internal/network
-interface = enp2s0f1
+interface = enp1s0
 format-connected = <label-connected>
 format-connected-padding = 2
 format-connected-background = ${colors.bar}
@@ -575,7 +575,7 @@ label-connected =   %downspeed%      %upspeed%
 ;:::::::::::::::::::::
 [module/wireless]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 format-connected = " <label-connected>"
 format-connected-padding = 2
 format-connected-background = ${colors.bar}
