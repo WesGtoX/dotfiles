@@ -9,13 +9,18 @@
         "command": "editor.action.transformToLowercase"
     },
     {
-        "key": "ctrl+numpad_divide",
+        "key": "ctrl+/",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+/",
+        "key": "ctrl+numpad_divide",
         "command": "-editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
-    }
+    },
+    {
+        "key": "ctrl+;",
+        "command": "toggleExplainMode",
+        "when": "suggestWidgetVisible"
+    },
 ]

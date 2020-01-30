@@ -4,7 +4,7 @@
 set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
+# text rendering and scalability on retina/hiDP1 displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -138,16 +138,16 @@ for_window [class="Spotify"] move to workspace $ws7
 
 for_window [class="Yad" title="yad-calendar"] floating enable
 
-# workspace $ws1 output eDP1
-# workspace $ws2 output eDP1
-# workspace $ws3 output HDMI1
-# workspace $ws4 output eDP1
-# workspace $ws5 output eDP1
-# workspace $ws6 output eDP1
-# workspace $ws7 output eDP1
-# workspace $ws8 output eDP1
-# workspace $ws9 output eDP1
-# workspace $ws10 output eDP1
+workspace $ws1 output DP1
+workspace $ws2 output DP1
+workspace $ws3 output DP1
+workspace $ws4 output eDP1
+workspace $ws5 output eDP1
+workspace $ws6 output eDP1
+workspace $ws7 output eDP1
+workspace $ws8 output eDP1
+workspace $ws9 output DP1
+workspace $ws10 output eDP1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -332,7 +332,8 @@ exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
 exec --no-startup-id compton --respect-prop-shadow -b &
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
-exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
+# exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
+exec --no-startup-id xrandr --output DP1 --auto --left-of eDP1 &
 
 
 # personal
