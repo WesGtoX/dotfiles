@@ -19,7 +19,8 @@
     "liveServer.settings.CustomBrowser": "google-chrome-stable",
     "terminal.integrated.cursorStyle": "line",
 
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "explorer.confirmDelete": false
 
     //TERMINAL CONFIGURATIONS
     // "terminal.integrated.cursorStyle": "line",
