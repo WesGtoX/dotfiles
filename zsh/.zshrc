@@ -184,6 +184,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     bgnotify
+    k
 )
 
 source $ZSH/oh-my-zsh.sh
