@@ -1,42 +1,58 @@
 {
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
-    
-    "editor.fontSize": 12,
-    "editor.tabSize": 4,
-    // "editor.fontFamily": "DejaVu Sans Mono, Fira Code",
-    "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, Hack Nerd Font, Weather Icons, \"Font Awesome 5 Brands\", \"Font Awesome 5 Free Solid\"",
-    "editor.minimap.enabled": true,
-    
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",
-    
-    "window.zoomLevel": 0,
-    "explorer.confirmDragAndDrop": false,
-    
-    "liveServer.settings.donotShowInfoMsg": true,
-    // "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.CustomBrowser": "google-chrome-stable",
-    "terminal.integrated.cursorStyle": "line",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
 
-    "python.linting.enabled": true,
-    "explorer.confirmDelete": false
+  "editor.fontSize": 12,
+  "editor.tabSize": 4,
+  // "editor.fontFamily": "DejaVu Sans Mono, Fira Code",
+  "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, Hack Nerd Font, Weather Icons, \"Font Awesome 5 Brands\", \"Font Awesome 5 Free Solid\"",
+  "editor.minimap.enabled": true,
+  "editor.wordWrap": "off",
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
 
-    //TERMINAL CONFIGURATIONS
-    // "terminal.integrated.cursorStyle": "line",
-    // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
 
-    //PowerShell Configuration
-    //"terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
-    
-    //GIT Bash Configuration
-    //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    
-    //Ubuntu in Windows 10 Configuration
-    //"terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\bash.exe",
-    
-    //ArchWSL in Windows 10 Configuration
-    // "terminal.integrated.shell.windows": "C:\\Program Files\\WindowsApps\\52569scottxu.ArchLinux_1.0.28.0_x64__xhwh673y3hxf8\\DistroLauncher\\archlinux.exe",
-    // need to set `ArchLinux` as default 'cmd> `wls -s ArchLinux`'
-    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+  "window.zoomLevel": 0,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  "liveServer.settings.donotShowInfoMsg": true,
+  // "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.CustomBrowser": "google-chrome-stable",
+
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+
+  "breadcrumbs.enabled": true,
+  // "sync.gist": "a69c06c84557f5fbc777ada4afe7d62b",
+
+  "python.linting.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+
+  //TERMINAL CONFIGURATIONS
+  "terminal.integrated.cursorStyle": "line",
+  // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // "terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe",
+
+  //PowerShell Configuration
+  //"terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+  //GIT Bash Configuration
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  //Ubuntu in Windows 10 Configuration
+  //"terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\bash.exe",
+
+  //ArchWSL in Windows 10 Configuration
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\WindowsApps\\yuk7.archwsl_19.7.2.0_x64__35zwpb4sx6e50\\Arch.exe",
+  // need to set `ArchLinux` as default 'cmd> `wls -s ArchLinux`'
+  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+
+  // "terminal.integrated.shell.linux": "/bin/bash",
+
+  // MARKDOWN ALL IN ONE
+  "markdown.extension.toc.updateOnSave": false,
+  "markdown.extension.toc.levels": "2..6",
 }
