@@ -127,14 +127,14 @@ assign [class="(Wpspdf|Gimp-2.10)"] $ws10
 
 # for_window [class="Termite"] floating enable, resize set 900 450, move position center
 for_window [class=Anki|feh|Lxappearance|java-lang-Thread] floating enable, move position center
-for_window [class=|Nm-connection-editor|Pavucontrol|Putty|zoom|Hubstaff] floating enable, move position center
+for_window [class=Nm-connection-editojr|Pavucontrol|Putty|zoom|Hubstaff] floating enable, move position center
 for_window [class=Anydesk|TeamViewer|VirtualBox-Manager|Gnome-boxes|obs] floating enable, move position center
 
 for_window [class=Anydesk|TeamViewer|Code|feh|Firefox|Genymotion] focus
 for_window [class=Gimp-2.10|jetbrains-clion|jetbrains-idea|jetbrains-pycharm] focus
 for_window [class=Subl3|Thunar|Wpspdfq] focus
 
-for_window [class="Spotify"] move to workspace $ws7
+for_window [class="Spotify"] move to workspace $ws7]
 
 for_window [class="Yad" title="yad-calendar"] floating enable
 
