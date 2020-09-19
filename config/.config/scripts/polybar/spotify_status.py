@@ -4,6 +4,7 @@ import sys
 import dbus
 import argparse
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument(
     '-t',
@@ -38,8 +39,8 @@ parser.add_argument(
     dest='play_pause_font'
 )
 
-
 args = parser.parse_args()
+
 
 def fix_string(string):
     # corrects encoding for the python version used
@@ -48,10 +49,11 @@ def fix_string(string):
     else:
         return string.encode('utf-8')
 
+
 # Default parameters
 output = fix_string(u'{play_pause} {artist}: {song}')
 trunclen = 25
-play_pause = fix_string(u'\u25B6,\u23F8') # first character is play, second is paused
+play_pause = fix_string(u'\u25B6,\u23F8') # first character is play, second is paused  # noqa
 
 label_with_font = '%{{T{font}}}{label}%{{T-}}'
 font = args.font
@@ -60,8 +62,10 @@ play_pause_font = args.play_pause_font
 # parameters can be overwritten by args
 if args.trunclen is not None:
     trunclen = args.trunclen
+
 if args.custom_format is not None:
     output = args.custom_format
+
 if args.play_pause is not None:
     play_pause = args.play_pause
 
@@ -77,11 +81,14 @@ try:
         'org.freedesktop.DBus.Properties'
     )
 
-    metadata = spotify_properties.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
-    status = spotify_properties.Get('org.mpris.MediaPlayer2.Player', 'PlaybackStatus')
+    metadata = spotify_properties.Get(
+        'org.mpris.MediaPlayer2.Player', 'Metadata'
+    )
+    status = spotify_properties.Get(
+        'org.mpris.MediaPlayer2.Player', 'PlaybackStatus'
+    )
 
     # Handle play/pause label
-
     play_pause = play_pause.split(',')
 
     if status == 'Playing':
@@ -92,13 +99,14 @@ try:
         play_pause = str()
 
     if play_pause_font:
-        play_pause = label_with_font.format(font=play_pause_font, label=play_pause)
+        play_pause = label_with_font.format(
+            font=play_pause_font, label=play_pause
+        )
 
     # Handle main label
-
-    artist = fix_string(metadata['xesam:artist'][0]) if metadata['xesam:artist'] else ''
-    song = fix_string(metadata['xesam:title']) if metadata['xesam:title'] else ''
-    album = fix_string(metadata['xesam:album']) if metadata['xesam:album'] else ''
+    artist = fix_string(metadata['xesam:artist'][0]) if metadata['xesam:artist'] else ''  # noqa
+    song = fix_string(metadata['xesam:title']) if metadata['xesam:title'] else ''  # noqa
+    album = fix_string(metadata['xesam:album']) if metadata['xesam:album'] else ''  # noqa
 
     if not artist and not song and not album:
         print('')
@@ -114,7 +122,12 @@ try:
             song = label_with_font.format(font=font, label=song)
             album = label_with_font.format(font=font, label=album)
 
-        print(output.format(artist=artist, song=song, play_pause=play_pause, album=album))
+        print(output.format(
+            artist=artist,
+            song=song,
+            play_pause=play_pause,
+            album=album
+        ))
 
 except Exception as e:
     if isinstance(e, dbus.exceptions.DBusException):

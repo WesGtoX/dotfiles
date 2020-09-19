@@ -178,13 +178,13 @@ POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=220
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    python
-    docker
-    zsh-syntax-highlighting
-    zsh-autosuggestions
     bgnotify
+    docker
+    git
     k
+    python
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
