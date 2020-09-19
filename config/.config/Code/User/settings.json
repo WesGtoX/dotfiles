@@ -14,6 +14,18 @@
   "editor.rulers": [80, 120],
   "editor.formatOnSave": false,
 
+  // Python
+  "python.showStartPage": false,
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.testing.unittestEnabled": true,
+  "[python]": {
+    "editor.formatOnSave": false
+  },
+    
+  // JavaScript
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
@@ -25,6 +37,8 @@
       "source.fixAll.eslint": true
     }
   },
+
+  // TypeScript
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -36,7 +50,7 @@
     }
   },
   
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.settings.editor": "json",
@@ -67,12 +81,12 @@
   "breadcrumbs.enabled": true,
   // "sync.gist": "a69c06c84557f5fbc777ada4afe7d62b",
 
-  "python.linting.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "never",
-
   // MARKDOWN ALL IN ONE
   "markdown.extension.toc.updateOnSave": false,
   "markdown.extension.toc.levels": "2..6",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
 
   //TERMINAL CONFIGURATIONS
