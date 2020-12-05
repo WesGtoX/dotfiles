@@ -4,4 +4,5 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Environment variables
-export PATH=$PATH:/home/wesley/.pipes
+export PATH=$PATH:$HOME/.pipes
+export PATH=$PATH:$HOME/.poetry/bin

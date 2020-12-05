@@ -182,6 +182,7 @@ plugins=(
     docker
     git
     k
+    poetry
     python
     zsh-autosuggestions
     zsh-syntax-highlighting

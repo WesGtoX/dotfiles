@@ -55,6 +55,10 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.settings.editor": "json",
   
+  "files.associations": {
+    "*.toml": "ini",
+    "*.lock": "ini",
+  },
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
