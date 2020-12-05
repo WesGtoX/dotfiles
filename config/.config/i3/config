@@ -127,7 +127,7 @@ assign [class="(Wpspdf|Gimp-2.10)"] $ws10
 
 # for_window [class="Termite"] floating enable, resize set 900 450, move position center
 for_window [class=Anki|feh|Lxappearance|java-lang-Thread] floating enable, move position center
-for_window [class=Nm-connection-editojr|Pavucontrol|Putty|zoom|Hubstaff] floating enable, move position center
+for_window [class=Nm-connection-editor|Pavucontrol|Putty|zoom|Hubstaff] floating enable, move position center
 for_window [class=Anydesk|TeamViewer|VirtualBox-Manager|Gnome-boxes|obs] floating enable, move position center
 
 for_window [class=Anydesk|TeamViewer|Code|feh|Firefox|Genymotion] focus
