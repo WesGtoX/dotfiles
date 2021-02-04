@@ -67,10 +67,13 @@
     "**/.DS_Store": true,
     "**/*.pyc": {"when": "$(basename).py"},
     "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
     "node_modules": true
   },
 
   "window.zoomLevel": 0,
+  
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.compactFolders": false,
@@ -93,15 +96,15 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
 
-  //TERMINAL CONFIGURATIONS
+  // TERMINAL CONFIGURATIONS
   "terminal.integrated.cursorStyle": "line",
   // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
   // "terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe",
 
-  //GIT Bash Configuration
+  // GIT Bash Configuration
   // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
-  //ArchWSL in Windows 10 Configuration
+  // ArchWSL in Windows 10 Configuration
   // "terminal.integrated.shell.windows": "C:\\Program Files\\WindowsApps\\yuk7.archwsl_19.7.2.0_x64__35zwpb4sx6e50\\Arch.exe",
   // need to set `ArchLinux` as default 'cmd> `wls -s ArchLinux`'
   // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
