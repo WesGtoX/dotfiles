@@ -134,7 +134,7 @@ for_window [class=Anydesk|TeamViewer|Code|feh|Firefox|Genymotion] focus
 for_window [class=Gimp-2.10|jetbrains-clion|jetbrains-idea|jetbrains-pycharm] focus
 for_window [class=Subl3|Thunar|Wpspdfq] focus
 
-for_window [class="Spotify"] move to workspace $ws7]
+for_window [class="Spotify"] move to workspace $ws7
 
 for_window [class="Yad" title="yad-calendar"] floating enable
 
