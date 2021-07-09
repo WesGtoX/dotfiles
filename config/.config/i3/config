@@ -116,10 +116,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # run xprop to get windows class
 # assign [class="(Termite)"] $ws1
 assign [class="(firefox|Google-chrome)"] $ws2
-assign [class="(Code|Subl3|jetbrains-pycharm|jetbrains-idea|jetbrains-clion|java-lang-Thread|jetbrains-studio|NetBeans IDE 8.2|Genymotion Player)"] $ws3
+assign [class="(Code|Subl|jetbrains-pycharm|jetbrains-goland|jetbrains-idea|jetbrains-clion|jetbrains-toolbox|java-lang-Thread|jetbrains-studio|NetBeans IDE 8.2|Genymotion Player)"] $ws3
 assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
-assign [class="(Anki|Wine|DBeaver|jetbrains-datagrip|Mysql-workbench-bin|Insomnia|RedisDesktopManager)"] $ws6
+assign [class="(Anki|Wine|DBeaver|jetbrains-datagrip|Mysql-workbench-bin|Insomnia|RedisDesktopManager|Camunda Modeler)"] $ws6
 assign [class="(deepin-movie|zoom)"] $ws7
 assign [class="(VirtualBox Manager|Gnome-boxes|Genymotion|Hubstaff)"] $ws8
 assign [class="(Anydesk|TeamViewer|obs)"] $ws9
@@ -132,7 +132,9 @@ for_window [class=Anydesk|TeamViewer|VirtualBox-Manager|Gnome-boxes|obs] floatin
 
 for_window [class=Anydesk|TeamViewer|Code|feh|Firefox|Genymotion] focus
 for_window [class=Gimp-2.10|jetbrains-clion|jetbrains-idea|jetbrains-pycharm] focus
-for_window [class=Subl3|Thunar|Wpspdfq] focus
+for_window [class=Subl|Thunar|Wpspdfq] focus
+
+for_window [class=jetbrains-toolbox] floating enable
 
 for_window [class="Spotify"] move to workspace $ws7
 
