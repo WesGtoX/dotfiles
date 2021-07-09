@@ -5,4 +5,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Environment variables
 export PATH=$PATH:$HOME/.pipes
+export PATH=$PATH:$HOME/.meme
+
 export PATH=$PATH:$HOME/.poetry/bin
+export PATH=$PATH:$HOME/.local/bin
+
+# Golang
+export GOPATH=$HOME/Workspace
+export GOBIN=${GOPATH}/bin
+export GONOSUMDB=github.com/atados
+export GONOPROXY=github.com/atados
