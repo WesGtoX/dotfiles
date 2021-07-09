@@ -3,6 +3,7 @@
   "files.autoSaveDelay": 1000,
 
   "editor.fontSize": 12,
+  "editor.lineHeight": 18,
   "editor.tabSize": 4,
   // "editor.fontFamily": "DejaVu Sans Mono, Fira Code",
   "editor.fontFamily": "DejaVu Sans Mono, Fira Sans, feather, Hack Nerd Font, Weather Icons, \"Font Awesome 5 Brands\", \"Font Awesome 5 Free Solid\"",
@@ -26,6 +27,7 @@
     
   // JavaScript
   "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.suggest.autoImports": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
@@ -39,6 +41,8 @@
   },
 
   // TypeScript
+  "typescript.suggest.autoImports": true,
+  "typescript.tsserver.log": "verbose",
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -49,15 +53,27 @@
       "source.fixAll.eslint": true
     }
   },
+
+  // Json
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   
   "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.settings.editor": "json",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   
   "files.associations": {
     "*.toml": "ini",
     "*.lock": "ini",
+    ".sequelizerc": "javascript",
+    ".stylelintrc": "json",
+    ".prettierrc": "json",
+    "*.tsx": "typescriptreact",
   },
   "files.exclude": {
     "**/.git": true,
@@ -88,12 +104,6 @@
   "breadcrumbs.enabled": true,
   // "sync.gist": "a69c06c84557f5fbc777ada4afe7d62b",
 
-  // MARKDOWN ALL IN ONE
-  "markdown.extension.toc.updateOnSave": false,
-  "markdown.extension.toc.levels": "2..6",
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
   "diffEditor.ignoreTrimWhitespace": false,
 
   // TERMINAL CONFIGURATIONS
@@ -110,4 +120,50 @@
   // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
 
   // "terminal.integrated.shell.linux": "/bin/bash",
+
+  // MARKDOWN ALL IN ONE
+  "markdown.extension.toc.updateOnSave": false,
+  "markdown.extension.toc.levels": "2..6",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+
+  // Dart
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": true,
+
+  // Material Icon Theme
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.folders.associations": {
+    "infra": "app",
+    "entities": "class",
+    "domain": "class",
+    "schemas": "class",
+    "typeorm": "database",
+    "repositories": "mappings",
+    "http": "container",
+    "migrations": "tools",
+    "modules": "components",
+    "implementations": "core",
+    "dtos": "typescript",
+    "fakes": "mock",
+    "websockets": "pipe",
+    "protos": "pipe",
+    "grpc": "pipe",
+    "providers": "include",
+    "subscribers": "messages",
+    "useCases": "controller",
+    "kafka": "scripts",
+    "mappers": "meta",
+    "_shared": "shared",
+    "eslint-config": "tools",
+    "kube": "kubernetes"
+  },
+  
+  "material-icon-theme.files.associations": {
+    "ormconfig.json": "database",
+    "tsconfig.json": "tune",
+    "*.proto": "3d",
+    "*.webpack.js": "webpack"
+  },
 }
