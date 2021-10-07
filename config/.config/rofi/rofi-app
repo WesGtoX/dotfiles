@@ -1,10 +1,7 @@
 #!/bin/bash
 
-rofi -sidebar-mode \
+rofi options \
+-sidebar-mode \
+-theme gtox \
 -modi run,drun,window \
--lines 15 \
--padding 18 \
--width 60 \
--location 0 \
 -show drun \
--columns 3 \
