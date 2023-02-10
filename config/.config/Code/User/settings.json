@@ -15,6 +15,14 @@
   "editor.rulers": [80, 120],
   "editor.formatOnSave": false,
 
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.settings.editor": "json",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+
   // Python
   "python.showStartPage": false,
   "python.linting.enabled": true,
@@ -24,6 +32,9 @@
   "[python]": {
     "editor.formatOnSave": false
   },
+
+  // Golang
+  "go.toolsManagement.autoUpdate": true,
     
   // JavaScript
   "javascript.updateImportsOnFileMove.enabled": "never",
@@ -40,13 +51,18 @@
     }
   },
 
+  // EMMET
+  "emmet.syntaxProfiles": { "javascript": "jsx" },
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+
   // TypeScript
   "typescript.suggest.autoImports": true,
   "typescript.tsserver.log": "verbose",
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.codeActionsOnSave": {
@@ -58,15 +74,20 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  
-  "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.settings.editor": "json",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+
+  // HTML
+  "html.format.indentInnerHtml": true,
+  // "html.format.wrapLineLength": 120,
+  "[html]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.html-language-features",
   },
+
+  // Dart
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": true,
   
+  // FILES
   "files.associations": {
     "*.toml": "ini",
     "*.lock": "ini",
@@ -88,18 +109,14 @@
     "node_modules": true
   },
 
-  "window.zoomLevel": 0,
-  
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.compactFolders": false,
 
+  // LIVESERVER
   "liveServer.settings.donotShowInfoMsg": true,
   // "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.CustomBrowser": "google-chrome-stable",
-
-  "emmet.syntaxProfiles": { "javascript": "jsx" },
-  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "liveServer.settings.CustomBrowser": "chrome",
 
   "breadcrumbs.enabled": true,
   // "sync.gist": "a69c06c84557f5fbc777ada4afe7d62b",
@@ -108,18 +125,30 @@
 
   // TERMINAL CONFIGURATIONS
   "terminal.integrated.cursorStyle": "line",
-  // "terminal.external.windowsExec": "C:\\Program Files\\Git\\bin\\bash.exe",
-  // "terminal.external.windowsExec": "C:\\Windows\\System32\\wsl.exe",
-
-  // GIT Bash Configuration
-  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
-  // ArchWSL in Windows 10 Configuration
-  // "terminal.integrated.shell.windows": "C:\\Program Files\\WindowsApps\\yuk7.archwsl_19.7.2.0_x64__35zwpb4sx6e50\\Arch.exe",
-  // need to set `ArchLinux` as default 'cmd> `wls -s ArchLinux`'
-  // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
-
-  // "terminal.integrated.shell.linux": "/bin/bash",
+  // "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // "terminal.integrated.profiles.windows": {
+  //   "PowerShell": {
+  //     "source": "PowerShell",
+  //     "icon": "terminal-powershell"
+  //   },
+  //   "Command Prompt": {
+  //     "path": [
+  //       "${env:windir}\\Sysnative\\cmd.exe",
+  //       "${env:windir}\\System32\\cmd.exe"
+  //     ],
+  //     "args": [],
+  //     "icon": "terminal-cmd"
+  //   },
+  //   "Git Bash": {
+  //     "source": "Git Bash",
+  //     "icon": "terminal-bash"
+  //   },
+  //   "Arch (WSL)": {
+  //     "path": "C:\\Windows\\System32\\wsl.exe",
+  //     "args": ["-d", "Arch"],
+  //     "icon": "terminal-linux"
+  //   }
+  // },
 
   // MARKDOWN ALL IN ONE
   "markdown.extension.toc.updateOnSave": false,
@@ -127,10 +156,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-
-  // Dart
-  "dart.debugExternalLibraries": true,
-  "dart.debugSdkLibraries": true,
 
   // Material Icon Theme
   "material-icon-theme.activeIconPack": "angular",
@@ -166,4 +191,13 @@
     "*.proto": "3d",
     "*.webpack.js": "webpack"
   },
+  
+  "redhat.telemetry.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "editor.inlineSuggest.enabled": true,
 }
