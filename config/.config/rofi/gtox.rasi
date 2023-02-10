@@ -1,0 +1,169 @@
+/**
+ * Author: Wesley Mendes
+ * Copyright: Wesley Mendes
+ */
+* {
+    text-color:                  #d8dee8;
+    background-color:            #00030F;
+    color-light:                 #3f3f3f;
+    red:                         #780000;
+    darkred:                     #870000;
+    orange:                      #faa41a;
+
+    selected-normal-foreground:  @darkred;
+    normal-foreground:           @text-color;
+    alternate-normal-background: @background-color;
+    selected-urgent-foreground:  @text-color;
+    urgent-foreground:           @text-color;
+    alternate-urgent-background: @background-color;
+    active-foreground:           @text-color;
+    selected-active-foreground:  @text-color;
+    alternate-normal-foreground: @text-color;
+    alternate-active-background: @darkred;
+    bordercolor:                 @text-color;
+    normal-background:           @background-color;
+    selected-normal-background:  @background-color;
+    separatorcolor:              @text-color;
+    spacing:                     2;
+    urgent-background:           @red;
+    alternate-urgent-foreground: @text-color;
+    selected-urgent-background:  @red;
+    alternate-active-foreground: @text-color;
+    selected-active-background:  @darkred;
+    active-background:           @darkred;
+}
+
+window {
+    width:            60%;
+    border:           0;
+    text-color:       @text-color;
+    background-color: @background-color;
+    padding:          18;
+    text-color:       @bordercolor;
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:     1px dash 0px 0px;
+    text-color: @separatorcolor;
+    padding:    2px 0px 0px;
+}
+
+textbox {
+    text-color: @text-color;
+}
+
+mode-switcher {
+    border: 1px dash 0px 0px;
+}
+
+button selected {
+    text-color:       @darkred;
+    background-color: @background-color;
+    horizontal-align: 0.5;
+}
+
+button normal {
+    text-color:       @text-color;
+    horizontal-align: 0.5;
+}
+
+listview {
+    fixed-height: 0;
+    border:       2px 0px 0px;
+    padding:      2px 0px 0px;
+    text-color:   @separatorcolor;
+    spacing:      0px 0px 0px 4px;
+    columns:      3;
+    lines:        15;
+    scrollbar:    true;
+}
+
+scrollbar {
+    width:        4px;
+    border:       0px;
+    handle-color: @text-color;
+    handle-width: 6px;
+    padding:      0;
+}
+
+inputbar {
+    spacing:  0;
+    border:   0px;
+    children: [
+        prompt, textbox-prompt-colon,
+        entry, case-indicator,
+        num-filtered-rows, textbox-sep, num-rows
+    ];
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        " ";
+    margin:     0px 0.3em 0em 0em;
+    text-color: @normal-foreground;
+}
+
+textbox-sep, num-filtered-rows, num-rows {
+    text-color: grey;
+    expand: false;
+    str: "/";
+}
+
+element {
+    border: 0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element.normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+
+element.normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+
+element.normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+}
+
+element.selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+
+element.selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+
+element.selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+
+element.alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+
+element.alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+
+element.alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+}
