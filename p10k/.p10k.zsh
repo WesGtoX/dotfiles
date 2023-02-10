@@ -70,7 +70,7 @@ typeset -g POWERLEVEL9K_NODEENV_BACKGROUND='springgreen4'
 
 #################################[ os_icon: os identifier ]##################################
 # OS identifier color
-typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='deepskyblue3'
+typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='white'
 typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=233
 
 # Custom icon identifier color
