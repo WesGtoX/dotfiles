@@ -1,5 +1,0 @@
-#!/bin/bash
-rofi options \
--sidebar-mode \
--modi run,drun,window \
--show drun \
