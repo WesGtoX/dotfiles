@@ -7,11 +7,25 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.pipes
 export PATH=$PATH:$HOME/.meme
 
+# Poetry
 export PATH=$PATH:$HOME/.poetry/bin
 export PATH=$PATH:$HOME/.local/bin
+
+# Pyenv
+export PATH="$HOME/.poetry/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Golang
 export GOPATH=$HOME/Workspace
 export GOBIN=${GOPATH}/bin
+export PATH=$PATH:$GOBIN
 export GONOSUMDB=github.com/atados
 export GONOPROXY=github.com/atados
+
+# Google Cloud Plataform
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# Powerlevel9k
+export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

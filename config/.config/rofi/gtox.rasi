@@ -2,16 +2,6 @@
  * Author: Wesley Mendes
  * Copyright: Wesley Mendes
  */
-configuration {
-    font:                          "DejaVu Sans Mono 11";
-    display-window: 				"";
-    display-windowcd: 				"";
-    display-run: 					"";
-    display-ssh: 					"";
-    display-drun: 					"";
-    display-combi: 					"";
-}
-
 * {
     text-color:                  #d8dee8;
     background-color:            #00030F;
@@ -21,24 +11,24 @@ configuration {
     orange:                      #faa41a;
 
     selected-normal-foreground:  @darkred;
-    normal-foreground:           @foreground;
-    alternate-normal-background: @background;
-    selected-urgent-foreground:  @foreground;
-    urgent-foreground:           @foreground;
-    alternate-urgent-background: @background;
-    active-foreground:           @foreground;
-    selected-active-foreground:  @foreground;
-    alternate-normal-foreground: @foreground;
+    normal-foreground:           @text-color;
+    alternate-normal-background: @background-color;
+    selected-urgent-foreground:  @text-color;
+    urgent-foreground:           @text-color;
+    alternate-urgent-background: @background-color;
+    active-foreground:           @text-color;
+    selected-active-foreground:  @text-color;
+    alternate-normal-foreground: @text-color;
     alternate-active-background: @darkred;
-    bordercolor:                 @foreground;
-    normal-background:           @background;
-    selected-normal-background:  @background;
-    separatorcolor:              @foreground;
+    bordercolor:                 @text-color;
+    normal-background:           @background-color;
+    selected-normal-background:  @background-color;
+    separatorcolor:              @text-color;
     spacing:                     2;
     urgent-background:           @red;
-    alternate-urgent-foreground: @foreground;
+    alternate-urgent-foreground: @text-color;
     selected-urgent-background:  @red;
-    alternate-active-foreground: @foreground;
+    alternate-active-foreground: @text-color;
     selected-active-background:  @darkred;
     active-background:           @darkred;
 }
@@ -46,8 +36,8 @@ configuration {
 window {
     width:            60%;
     border:           0;
-    text-color:       @foreground;
-    background-color: @background;
+    text-color:       @text-color;
+    background-color: @background-color;
     padding:          18;
     text-color:       @bordercolor;
 }
@@ -64,7 +54,7 @@ message {
 }
 
 textbox {
-    text-color: @foreground;
+    text-color: @text-color;
 }
 
 mode-switcher {
@@ -73,12 +63,12 @@ mode-switcher {
 
 button selected {
     text-color:       @darkred;
-    background-color: @foreground;
+    background-color: @background-color;
     horizontal-align: 0.5;
 }
 
 button normal {
-    text-color:       @foreground;
+    text-color:       @text-color;
     horizontal-align: 0.5;
 }
 

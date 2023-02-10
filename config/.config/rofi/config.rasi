@@ -1,0 +1,21 @@
+configuration {
+    modes:            "run,drun,window";
+    font:             "DejaVu Sans Mono 11";
+    display-window:   "";
+    display-windowcd: "";
+    display-run:      "";
+    display-ssh:      "";
+    display-drun:     "";
+    display-combi:    "";
+
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/rofi/gtox.rasi"

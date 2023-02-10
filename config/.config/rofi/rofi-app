@@ -1,7 +1,5 @@
 #!/bin/bash
-
 rofi options \
 -sidebar-mode \
--theme gtox \
 -modi run,drun,window \
 -show drun \

@@ -25,6 +25,14 @@
 
   "window.zoomLevel": 0,
 
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.settings.editor": "json",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+
   // Python
   "python.showStartPage": false,
   "python.linting.enabled": true,
@@ -63,7 +71,8 @@
   "[typescriptreact]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.codeActionsOnSave": {
@@ -80,7 +89,7 @@
   "html.format.indentInnerHtml": true,
   // "html.format.wrapLineLength": 120,
   "[html]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "vscode.html-language-features",
   },
 
@@ -117,7 +126,7 @@
   // LIVESERVER
   "liveServer.settings.donotShowInfoMsg": true,
   // "liveServer.settings.CustomBrowser": "chrome",
-  "liveServer.settings.CustomBrowser": "google-chrome-stable",
+  "liveServer.settings.CustomBrowser": "chrome",
 
   "breadcrumbs.enabled": true,
   // "sync.gist": "a69c06c84557f5fbc777ada4afe7d62b",
@@ -194,4 +203,11 @@
   },
   
   "redhat.telemetry.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "editor.inlineSuggest.enabled": true,
 }

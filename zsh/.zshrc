@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+export LANG="en_US.UTF-8"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -7,117 +8,13 @@ export TERM="xterm-256color"
 ZSH_DISABLE_COMPFIX=true
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/wesley/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# Set 'fonts'
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-# Set 'prompt' elements
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir_writable pyenv virtualenv anaconda context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
-
-# Set 'prompt'
-# POWERLEVEL9K_DISABLE_LPROMPT=true
-# POWERLEVEL9K_DISABLE_RPROMPT=true
-
-# Set 'custom_icon'
-# POWERLEVEL9K_CUSTOM_ARCH_ICON="echo  "
-
-# Set 'shorten_dir' length
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-
-# Set 'color' scheme
-POWERLEVEL9K_COLOR_SCHEME='light'
-
-# Set 'os_icon' segment colors
-POWERLEVEL9K_OS_ICON_FOREGROUND='deepskyblue3'
-POWERLEVEL9K_OS_ICON_BACKGROUND=233
-
-# Set 'custom_icon' segment colors
-# POWERLEVEL9K_CUSTOM_ARCH_ICON_BACKGROUND=069
-# POWERLEVEL9K_CUSTOM_ARCH_ICON_FOREGROUND=015
-
-# Set 'pyenv' segment colors
-POWERLEVEL9K_PYENV_BACKGROUND='springgreen4'
-
-# Set 'virtualenv' segment colors
-POWERLEVEL9K_VIRTUALENV_BACKGROUND='springgreen4'
-
-# Set 'anaconda' segment colors
-POWERLEVEL9K_ANACONDA_BACKGROUND='springgreen4'
-
-# Set 'context' segment colors
-## Default User
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND=010
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND=233
-## Root User
-POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=010
-POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND=233
-## Sudo User
-POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND=010
-POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND=233
-## Remote User
-POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND=010
-POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND=233
-## Remote Sudo User
-POWERLEVEL9K_CONTEXT_REMOTE_SUDO_FOREGROUND=010
-POWERLEVEL9K_CONTEXT_REMOTE_SUDO_BACKGROUND=233
-
-# Set 'dir_writable' segment colors
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND=220
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND=088
-
-# Set 'dir' segment colors
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND=233
-POWERLEVEL9K_DIR_HOME_FOREGROUND=233
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND=233
-POWERLEVEL9K_DIR_ETC_FOREGROUND=233
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND=075
-POWERLEVEL9K_DIR_HOME_BACKGROUND=075
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND=075
-POWERLEVEL9K_DIR_ETC_BACKGROUND=075
-
-# Set 'vcs' segment colors
-## Checkout Clean
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND=233
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND=154
-## Checkout Contains Untracked Files
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=233
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=154
-## Checkout Contains (Tracked) Modified Files
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=233
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=220
-## Checkout Is Clobbered
-POWERLEVEL9K_VCS_CLOBBERED_FOREGROUND=233
-POWERLEVEL9K_VCS_CLOBBERED_BACKGROUND=196
-
-# Set 'status' segment colors
-## Status OK
-POWERLEVEL9K_STATUS_OK_FOREGROUND=154
-POWERLEVEL9K_STATUS_OK_BACKGROUND=233
-## Status Error
-POWERLEVEL9K_STATUS_CROSS=true
-### if POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_STATUS_ERROR_FOREGROUND=196
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND=233
-### if POWERLEVEL9K_STATUS_CROSS=false
-# P9K_STATUS_ERROR_CR_FOREGROUND=154
-# P9K_STATUS_ERROR_CR_BACKGROUND=196
-
-# Set 'root_indicator' segment colors
-POWERLEVEL9K_ROOT_INDICATOR_FOREGROUND=220
-POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND=233
-
-# Set 'background_jobs' segment colors
-POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=233
-POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=220
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -221,3 +118,4 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/nvm/init-nvm.sh
