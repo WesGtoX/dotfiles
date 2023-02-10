@@ -126,7 +126,7 @@ assign [class="(Anydesk|TeamViewer|obs)"] $ws9
 assign [class="(Wpspdf|Gimp-2.10)"] $ws10
 
 # for_window [class="Termite"] floating enable, resize set 900 450, move position center
-for_window [class=Anki|feh|Lxappearance|java-lang-Thread] floating enable, move position center
+for_window [class=Anki|feh|Lxappearance|java-lang-Thread|1Password] floating enable, move position center
 for_window [class=Nm-connection-editor|Pavucontrol|Putty|zoom|Hubstaff|Baobab] floating enable, move position center
 for_window [class=Anydesk|TeamViewer|VirtualBox-Manager|Gnome-boxes|obs] floating enable, move position center
 
@@ -329,12 +329,12 @@ bindsym $mod+l exec dm-tool switch-to-greeter
 exec_always --no-startup-id $HOME/.config/scripts/polybar/polybar.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minimalist2.jpg
 # exec_always --no-startup-id feh --bg-fill --randomize $HOME/Images/Wallpapers/*
-exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
+# exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
 exec --no-startup-id compton --respect-prop-shadow -b &
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
-exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
-
+# exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
+exec --no-startup-id /usr/bin/VBoxClient-all
 
 # personal
 # bindsym $mod+Shift+h exec $HOME/.config/Hubstaff/HubstaffClient.bin.x86_64 floating enable
