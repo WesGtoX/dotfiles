@@ -70,11 +70,9 @@ font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
 font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
 font-8 = Weather Icons:size=10;0
 
-# modules-left = info-trash bluetooth updates-arch spotify prev play-stop next
-modules-left = info-trash updates-arch
+modules-left = info-trash bluetooth updates-arch spotify prev play-stop next
 modules-center = i3
-# modules-right = temperature cpu ram nvidia-info battery user system
-modules-right = cpu ram user system
+modules-right = temperature cpu ram nvidia-info battery user system
 
 tray-position = right
 tray-padding = 2
@@ -128,11 +126,10 @@ font-6 = "Font Awesome 5 Brands:pixelsize=10;0;0"
 font-7 = "Hack Nerd Font Mono:pixelsize=10;0;0"
 font-8 = Weather Icons:size=10;0
 
-# modules-left = backlight volume pulseaudio-input openweathermap
-modules-left = volume pulseaudio-input
+modules-left = backlight volume pulseaudio-input openweathermap
 # musica
 modules-center = window
-modules-right = files wired popup-calendar hour
+modules-right = files wired wireless popup-calendar hour
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -179,13 +176,13 @@ click-left = $HOME/.config/scripts/polybar/info-trash.sh --clean
 ;:::::::::::::::::::::
 ;     BLUETOOTH      ;
 ;:::::::::::::::::::::
-# [module/bluetooth]
-# type = custom/script
-# label =  %output%
-# label-padding = 2
-# label-background = ${colors.bar}
-# exec = $HOME/.config/scripts/polybar/isrunning-bluetooth.sh
-# interval = 10
+[module/bluetooth]
+type = custom/script
+label =  %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/polybar/isrunning-bluetooth.sh
+interval = 10
 
 ;:::::::::::::::::::::
 ;    ARCH UPDATES    ;
@@ -198,45 +195,45 @@ label-background = ${colors.bar}
 exec = $HOME/.config/scripts/polybar/updates-arch-combined.sh
 interval = 600
 
-# ;:::::::::::::::::::::
-# ;       SPOTIFY      ;
-# ;:::::::::::::::::::::
-# [module/spotify]
-# type = custom/script
-# interval = 1
-# format-prefix = "    "
-# format = <label>
-# exec = python $HOME/.config/scripts/polybar/spotify_status.py -f '{artist} - {song}'
-# format-underline = ${colors.spotify}
+;:::::::::::::::::::::
+;       SPOTIFY      ;
+;:::::::::::::::::::::
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "    "
+format = <label>
+exec = python $HOME/.config/scripts/polybar/spotify_status.py -f '{artist} - {song}'
+format-underline = ${colors.spotify}
 
-# ;:::::::::::::::::::::
-# ;    PREV CONTROL    ;
-# ;:::::::::::::::::::::
-# [module/prev]
-# type = custom/text
-# content = 
-# content-padding = 2
-# content-background = ${colors.bar}
-# click-left = playerctl previous
+;:::::::::::::::::::::
+;    PREV CONTROL    ;
+;:::::::::::::::::::::
+[module/prev]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl previous
 
-# ;:::::::::::::::::::::
-# ;    PLAY / PAUSE    ;
-# ;:::::::::::::::::::::
-# [module/play-stop]
-# type = custom/text
-# content = 
-# content-background = ${colors.bar}
-# click-left = playerctl play-pause
+;:::::::::::::::::::::
+;    PLAY / PAUSE    ;
+;:::::::::::::::::::::
+[module/play-stop]
+type = custom/text
+content = 
+content-background = ${colors.bar}
+click-left = playerctl play-pause
 
-# ;:::::::::::::::::::::
-# ;    NEXT CONTROL    ;
-# ;:::::::::::::::::::::
-# [module/next]
-# type = custom/text
-# content = 
-# content-padding = 2
-# content-background = ${colors.bar}
-# click-left = playerctl next
+;:::::::::::::::::::::
+;    NEXT CONTROL    ;
+;:::::::::::::::::::::
+[module/next]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${colors.bar}
+click-left = playerctl next
 
 ;:::::::::::::::::::::
 ;        MUSIC       ;
@@ -262,7 +259,7 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5;
+ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
@@ -295,36 +292,36 @@ label-urgent-foreground = ${colors.urgent}
 ;:::::::::::::::::::::
 ;     TEMPERATURE    ;
 ;:::::::::::::::::::::
-# [module/temperature]
-# type = internal/temperature
-# ; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
-# # ../thermal_zone0: acpitz
-# # ../thermal_zone1: acpitz
-# # ../thermal_zone2: x86_pkg_temp
-# thermal-zone = 2
-# warn-temperature = 70
+[module/temperature]
+type = internal/temperature
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+# ../thermal_zone0: acpitz
+# ../thermal_zone1: acpitz
+# ../thermal_zone2: x86_pkg_temp
+thermal-zone = 2
+warn-temperature = 70
 
-# format = <ramp> <label>
-# format-padding = 2
-# format-background = ${colors.bar}
-# format-warn = <ramp> <label-warn>
-# format-warn-padding = 2
+format = <ramp> <label>
+format-padding = 2
+format-background = ${colors.bar}
+format-warn = <ramp> <label-warn>
+format-warn-padding = 2
 
-# label = %temperature-c%
-# label-warn = %temperature-c%
-# label-warn-foreground = ${colors.warn}
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.warn}
 
-# ramp-0 = "%{F#0008FF}%{F-}"
-# ramp-1 = "%{F#0008FF}%{F-}"
-# ramp-2 = "%{F#e4b226}%{F-}"
-# ramp-3 = "%{F#ff6f00}%{F-}"
-# ramp-4 = "%{F#FF0000}%{F-}"
+ramp-0 = "%{F#0008FF}%{F-}"
+ramp-1 = "%{F#0008FF}%{F-}"
+ramp-2 = "%{F#e4b226}%{F-}"
+ramp-3 = "%{F#ff6f00}%{F-}"
+ramp-4 = "%{F#FF0000}%{F-}"
 
-# # ramp-0 = ""
-# # ramp-1 = ""
-# # ramp-2 = ""
-# # ramp-3 = ""
-# # ramp-4 = ""
+# ramp-0 = ""
+# ramp-1 = ""
+# ramp-2 = ""
+# ramp-3 = ""
+# ramp-4 = ""
 
 ;:::::::::::::::::::::
 ;         CPU        ;
@@ -349,53 +346,53 @@ label =  %percentage_used%%
 label-padding = 2
 label-background = ${colors.bar}
 
-# ;:::::::::::::::::::::
-# ;         GPU        ;
-# ;:::::::::::::::::::::
-# [module/nvidia-info]
-# type = custom/script
-# tail = true
-# label = %output%
-# label-padding = 2
-# label-background = ${colors.bar}
-# exec-if = nvidia-smi
-# exec = $HOME/.config/scripts/polybar/system-nvidia-smi.sh
+;:::::::::::::::::::::
+;         GPU        ;
+;:::::::::::::::::::::
+[module/nvidia-info]
+type = custom/script
+tail = true
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec-if = nvidia-smi
+exec = $HOME/.config/scripts/polybar/system-nvidia-smi.sh
 
-# ;:::::::::::::::::::::
-# ;       BATTERY      ;
-# ;:::::::::::::::::::::
-# [module/battery]
-# type = internal/battery
-# battery = BAT1
-# adapter = ACAD
-# full-at = 98
+;:::::::::::::::::::::
+;       BATTERY      ;
+;:::::::::::::::::::::
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+full-at = 98
 
-# format-charging = <animation-charging> <label-charging>
-# format-charging-underline = ${colors.battery}
-# format-charging-padding = 2
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.battery}
+format-charging-padding = 2
 
-# format-discharging = <ramp-capacity> <label-discharging>
-# format-discharging-underline = ${self.format-charging-underline}
-# format-discharging-padding = 2
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+format-discharging-padding = 2
 
-# format-full-prefix = "  "
-# format-full-prefix-foreground = ${colors.icon}
-# format-full-underline = ${self.format-charging-underline}
+format-full-prefix = "  "
+format-full-prefix-foreground = ${colors.icon}
+format-full-underline = ${self.format-charging-underline}
 
-# ramp-capacity-0 = "%{F#FF0000}%{F-}"
-# ramp-capacity-1 = "%{F#FF0000}%{F-}"
-# ramp-capacity-2 = "%{F#e4b226}%{F-}"
-# ramp-capacity-3 = "%{F#98de00}%{F-}"
-# ramp-capacity-4 = "%{F#98de00}%{F-}"
-# ramp-capacity-foreground = ${colors.icon}
+ramp-capacity-0 = "%{F#FF0000}%{F-}"
+ramp-capacity-1 = "%{F#FF0000}%{F-}"
+ramp-capacity-2 = "%{F#e4b226}%{F-}"
+ramp-capacity-3 = "%{F#98de00}%{F-}"
+ramp-capacity-4 = "%{F#98de00}%{F-}"
+ramp-capacity-foreground = ${colors.icon}
 
-# animation-charging-0 = "%{F#FF0000}%{F-}"
-# animation-charging-1 = "%{F#FF0000}%{F-}"
-# animation-charging-2 = "%{F#e4b226}%{F-}"
-# animation-charging-3 = "%{F#98de00}%{F-}"
-# animation-charging-4 = "%{F#98de00}%{F-}"
-# animation-charging-foreground = ${colors.icon}
-# animation-charging-framerate = 500
+animation-charging-0 = "%{F#FF0000}%{F-}"
+animation-charging-1 = "%{F#FF0000}%{F-}"
+animation-charging-2 = "%{F#e4b226}%{F-}"
+animation-charging-3 = "%{F#98de00}%{F-}"
+animation-charging-4 = "%{F#98de00}%{F-}"
+animation-charging-foreground = ${colors.icon}
+animation-charging-framerate = 500
 
 ;:::::::::::::::::::::
 ;        USER        ;
@@ -449,20 +446,20 @@ menu-4-0-exec = systemctl poweroff
 ;:::::::::::::::::::::
 ;       BRIGHT       ;
 ;:::::::::::::::::::::
-# [module/backlight]
-# type = internal/xbacklight
-# enable-scroll = false
+[module/backlight]
+type = internal/xbacklight
+enable-scroll = false
 
-# format = <ramp><label>
-# format-padding = 2
-# label = %percentage%%
+format = <ramp><label>
+format-padding = 2
+label = %percentage%%
 
-# ramp-0 = 🌕
-# ramp-1 = 🌔
-# ramp-2 = 🌓
-# ramp-3 = 🌒
-# ramp-4 = 🌑
-# ramp-padding = 1
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+ramp-padding = 1
 
 ;:::::::::::::::::::::
 ;       VOLUME       ;
@@ -509,17 +506,17 @@ click-left = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --mute_source
 scroll-up =  $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --volume_source_up
 scroll-down = $HOME/.config/scripts/polybar/pulseaudio-rofi.sh --volume_source_down
 
-# ;:::::::::::::::::::::
-# ;   OPENWEATHERMAP   ;
-# ;:::::::::::::::::::::
-# [module/openweathermap]
-# type = custom/script
-# interval = 600
-# label = %output%
-# label-padding = 2
-# label-background = ${colors.bar}
-# exec = $HOME/.config/scripts/polybar/openweathermap-fullfeatured.sh
-# label-font = 9
+;:::::::::::::::::::::
+;   OPENWEATHERMAP   ;
+;:::::::::::::::::::::
+[module/openweathermap]
+type = custom/script
+interval = 600
+label = %output%
+label-padding = 2
+label-background = ${colors.bar}
+exec = $HOME/.config/scripts/polybar/openweathermap-fullfeatured.sh
+label-font = 9
 
 ;:::::::::::::::::::::
 ;       WINDOW       ;
@@ -555,7 +552,7 @@ label-unmounted-background = ${colors.bar}
 ;:::::::::::::::::::::
 [module/wired]
 type = internal/network
-interface = enp0s3
+interface = enp2s0f1
 format-connected = <label-connected>
 format-connected-padding = 2
 format-connected-background = ${colors.bar}
@@ -576,15 +573,15 @@ label-connected =   %downspeed%      %upspeed%
 ;:::::::::::::::::::::
 ;       WIRELESS     ;
 ;:::::::::::::::::::::
-# [module/wireless]
-# type = internal/network
-# interface = wlp3s0
-# format-connected = " <label-connected>"
-# format-connected-padding = 2
-# format-connected-background = ${colors.bar}
-# label-connected = %{A1:nm-connection-editor:}%essid%%{A}
-# format-disconnected = <label-disconnected>
-# label-disconnected = %{A1:nm-connection-editor:} Disconnected%{A}
+[module/wireless]
+type = internal/network
+interface = wlp3s0
+format-connected = " <label-connected>"
+format-connected-padding = 2
+format-connected-background = ${colors.bar}
+label-connected = %{A1:nm-connection-editor:}%essid%%{A}
+format-disconnected = <label-disconnected>
+label-disconnected = %{A1:nm-connection-editor:} Disconnected%{A}
 
 ;:::::::::::::::::::::
 ;        HOUR        ;
