@@ -121,7 +121,7 @@ assign [class="(Thunar)"] $ws4
 assign [class="(TelegramDesktop|Slack|discord)"] $ws5
 assign [class="(Anki|Wine|DBeaver|jetbrains-datagrip|Mysql-workbench-bin|Insomnia|RedisDesktopManager|Camunda Modeler)"] $ws6
 assign [class="(deepin-movie|zoom)"] $ws7
-assign [class="(VirtualBox Manager|Gnome-boxes|Genymotion|Hubstaff)"] $ws8
+assign [class="(VirtualBox Manager|Gnome-boxes|Genymotion|Hubstaff|Toggl Desktop)"] $ws8
 assign [class="(Anydesk|TeamViewer|obs)"] $ws9
 assign [class="(Wpspdf|Gimp-2.10)"] $ws10
 
@@ -137,6 +137,8 @@ for_window [class=Subl|Thunar|Wpspdfq] focus
 for_window [class=jetbrains-toolbox] floating enable
 
 for_window [class="Spotify"] move to workspace $ws7
+
+for_window [class="Toggl Desktop"] floating enable, move position center
 
 for_window [class="Yad" title="yad-calendar"] floating enable
 
@@ -329,12 +331,12 @@ bindsym $mod+l exec dm-tool switch-to-greeter
 exec_always --no-startup-id $HOME/.config/scripts/polybar/polybar.sh
 exec_always --no-startup-id feh --bg-fill $HOME/Images/Wallpapers/abstract_minimalist2.jpg
 # exec_always --no-startup-id feh --bg-fill --randomize $HOME/Images/Wallpapers/*
-# exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
+exec_always --no-startup-id $HOME/.config/scripts/battery.sh &
 exec --no-startup-id compton --respect-prop-shadow -b &
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
-# exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
-exec --no-startup-id /usr/bin/VBoxClient-all
+exec --no-startup-id xrandr --output HDMI1 --auto --above eDP1 &
+
 
 # personal
 # bindsym $mod+Shift+h exec $HOME/.config/Hubstaff/HubstaffClient.bin.x86_64 floating enable
